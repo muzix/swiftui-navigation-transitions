@@ -53,6 +53,13 @@ struct PageTwo: View {
 		} destination: {
 			PageThree()
 		}
+        .modifier {
+            if #available(iOS 16, *) {
+                $0.toolbar(.hidden)
+            } else {
+                $0.navigationBarHidden(true)
+            }
+        }
 	}
 }
 

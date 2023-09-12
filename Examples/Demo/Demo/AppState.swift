@@ -224,14 +224,14 @@ final class AppState: ObservableObject {
 		}
 	}
 
-	@Published var transition: Transition = .slide
+	@Published var transition: Transition = .default
 
 	@Published var animation: Animation = .spring
 	@Published var duration: Duration = .fast
 	@Published var stiffness: Stiffness = .low
 	@Published var damping: Damping = .veryHigh
 
-	@Published var interactivity: Interactivity = .edgePan
+    @Published var interactivity: Interactivity = .pan
 
 	@Published var isPresentingSettings: Bool = false
 }
